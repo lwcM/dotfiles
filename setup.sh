@@ -14,10 +14,12 @@ sudo apt install -y ssh vim git tmux gcc make g++ gdb build-essential binutils \
                         p7zip-full zip unzip rar unrar \
                         htop \
                         ctags cscope exuberant-ctags \
-                        python-pip \
+                        python-pip python3-pip\
                         libssl-dev
 
-sudo apt install -y zsh autojump imagemagick
+sudo apt install -y zsh autojump imagemagick powerline
+
+pip3 install --user powerline-status
 
 MYPWD=$(pwd)
 
@@ -42,11 +44,16 @@ ln -s $MYPWD/.bashrc .bashrc
 # vim
 rm -rf ~/.vim
 ln -s $MYPWD/.vim .vim
-git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
 
-vim +PluginInstall +qall
 rm -rf ~/.vimrc
+vim +PlugInstall +qall
 ln -s $MYPWD/.vim/vimrc .vimrc
+sed 's/desert/solarized/g' ~/.vimrc
+
+# powerline
+curl https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --create-dirs -o ~/.fonts/PowerlineSymbols.otf 2>/dev/null
+fc-cache -vf ~/.fonts/
+curl https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf --create-dirs -o ~/.config/fontconfig/conf.d/10-powerline-symbols.conf 2>/dev/null
 
 # zsh
 rm -rf ~/.oh-my-zsh

@@ -1,4 +1,4 @@
-source ~/.vim/bundles.vim
+source ~/.vim/plugin.vim
 
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -18,7 +18,7 @@ let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-color solarized
+color desert
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -162,7 +162,12 @@ let NERDCompactSexyComs=1
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set t_Co=256
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
