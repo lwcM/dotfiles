@@ -46,9 +46,9 @@ rm -rf ~/.vim
 ln -s $MYPWD/.vim .vim
 
 rm -rf ~/.vimrc
+git clone https://github.com/altercation/vim-colors-solarized.git $MYPWD/.vim/plugged/vim-colors-solarized
 vim +PlugInstall +qall
 ln -s $MYPWD/.vim/vimrc .vimrc
-sed 's/desert/solarized/g' ~/.vimrc
 
 # powerline
 curl https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --create-dirs -o ~/.fonts/PowerlineSymbols.otf 2>/dev/null
