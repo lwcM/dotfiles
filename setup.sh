@@ -17,9 +17,17 @@ sudo apt install -y ssh vim git tmux gcc make g++ gdb build-essential binutils \
                         python-pip python3-pip\
                         libssl-dev
 
-sudo apt install -y zsh autojump imagemagick powerline
+sudo apt install -y zsh autojump imagemagick
+sudo apt install -y powerline
+sudo apt install -y vim-gui-common vim-runtime
 
-pip3 install --user powerline-status
+pysupport=$(vim --version | grep +python)
+if [[ $pysupport == *"+python"* ]]; then
+    pip install --user powerline-status
+    sed -i 's/python3/python/g' .vim/vimrc
+else
+    pip3 install --user powerline-status
+fi
 
 MYPWD=$(pwd)
 
@@ -64,6 +72,6 @@ ln -s $MYPWD/.zshrc .zshrc
 ## zsh syntax highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-sudo chsh -s /bin/zsh
+chsh -s /bin/zsh
 
 
