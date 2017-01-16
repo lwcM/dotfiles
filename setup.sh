@@ -21,14 +21,6 @@ sudo apt install -y zsh autojump imagemagick
 sudo apt install -y powerline
 sudo apt install -y vim-gui-common vim-runtime
 
-pysupport=$(vim --version | grep +python)
-if [[ $pysupport == *"+python"* ]]; then
-    pip install --user powerline-status
-    sed -i 's/python3/python/g' .vim/vimrc
-else
-    pip3 install --user powerline-status
-fi
-
 MYPWD=$(pwd)
 
 ## pyenv

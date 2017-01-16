@@ -42,6 +42,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 "Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'bronson/vim-trailing-whitespace'
 
 "-------------
