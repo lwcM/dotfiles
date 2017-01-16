@@ -58,6 +58,7 @@ curl https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbol
 # zsh
 rm -rf ~/.oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 rm -rf ~/.zshrc
 ln -s $MYPWD/.zshrc .zshrc
 
