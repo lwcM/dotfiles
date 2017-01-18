@@ -32,6 +32,23 @@ export TERM="xterm-256color"
 # Alias
 # ------------------------------------------------------------------------------
 
+alias vi='vim'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias ll='ls -FGlAhp'
+
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
+
+alias ~="cd ~"
+alias c='clear'
+
 alias path='echo -e ${PATH//:/\\n}'
 alias qfind="find . -name "
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
