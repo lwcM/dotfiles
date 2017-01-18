@@ -5,9 +5,7 @@
 
 sudo apt update
 sudo apt install -y ssh vim git tmux gcc make g++ gdb build-essential binutils \
-                        gcc make g++ gdb build-essential binutils \
-                        gcc-multilib g++-multilib \
-                        build-essential binutils binutils-multiarch \
+                        gcc-multilib g++-multilib binutils-multiarch cmake\
                         wget curl \
                         ruby python3 ipython \
                         zlib1g-dev qemu xorg bridge-utils vncviewer \
@@ -19,7 +17,7 @@ sudo apt install -y ssh vim git tmux gcc make g++ gdb build-essential binutils \
 
 sudo apt install -y zsh autojump imagemagick
 sudo apt install -y powerline
-sudo apt install -y vim-gui-common vim-runtime
+sudo apt install -y vim-gui-common vim-runtime pyflakes
 
 MYPWD=$(pwd)
 
@@ -49,6 +47,10 @@ rm -rf ~/.vimrc
 git clone https://github.com/altercation/vim-colors-solarized.git $MYPWD/.vim/plugged/vim-colors-solarized
 ln -s $MYPWD/.vim/vimrc .vimrc
 vim +PlugInstall +qall
+wget https://raw.githubusercontent.com/JDevlieghere/dotfiles/master/.vim/.ycm_extra_conf.py -O ~/.vim/.ycm_extra_conf.py 2>/dev/null
+cd ~/.vim/plugged/youcompleteme/
+./install.py --clang-completer
+cd ~
 
 # powerline
 curl https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf --create-dirs -o ~/.fonts/PowerlineSymbols.otf 2>/dev/null
