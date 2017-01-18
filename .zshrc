@@ -32,6 +32,8 @@ export TERM="xterm-256color"
 # Alias
 # ------------------------------------------------------------------------------
 
+source $HOME/.aliases
+
 alias vi='vim'
 alias cp='cp -iv'
 alias mv='mv -iv'
