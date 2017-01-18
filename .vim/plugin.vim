@@ -35,7 +35,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 " IDE features
 "--------------
 Plug 'scrooloose/nerdtree'
-Plug 'humiaozuzu/TabBar'
+"Plug 'humiaozuzu/TabBar'
 Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
