@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 "------------------
 "Plug 'Shougo/neocomplcache'
 Plug 'valloric/youcompleteme'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
 "Plug 'ervandew/supertab'

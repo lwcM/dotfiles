@@ -65,7 +65,7 @@ alias openPorts='sudo lsof -i | grep LISTEN'
 
 # Some Functions
 # ------------------------------------------------------------------------------
-cd() { builtin cd "$@"; ls -d *([1,50]); }
+cd() { builtin cd "$@"; ls -Ad $(ls | head -50); }
 mcd () { mkdir -p "$1" && cd "$1"; }
 zipf () { zip -r "$1".zip "$1" ; }
 
