@@ -47,6 +47,7 @@ Plug 'scrooloose/syntastic'
 " Other Utils
 "-------------
 Plug 'nvie/vim-togglemouse'
+Plug 'airblade/vim-gitgutter'
 
 "----------------------------------------
 " Syntax/Indent for language enhancement

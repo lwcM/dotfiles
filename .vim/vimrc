@@ -167,6 +167,8 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_invoke_completion = '<C-e>'
 let g:ycm_show_diagnostics_ui = 1
+let g:ycm_max_diagnostics_to_display = 10000
+let g:ycm_always_populate_location_list = 1
 
 " syntastic
 let g:syntastic_error_symbol = '✗'
@@ -180,9 +182,11 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_loc_list_height = 5
 
 " snipmate
-imap ss <esc>a<Plug>snipMateNextOrTrigger
-smap ss <Plug>snipMateNextOrTrigger
+imap zsc <esc>a<Plug>snipMateNextOrTrigger
+smap zsc <Plug>snipMateNextOrTrigger
 
+" vim-gitgutter
+let g:gitgutter_max_signs = 10000
 
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
